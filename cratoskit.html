@@ -6,17 +6,18 @@
     <title>Sticky Navigation Bar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"/>
     <style>
-        body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+/* Navbar Styles */
 .navbar {
-    position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     width: 100%;
-    background-color:#08145d;
+    background-color: #08145d;
     color: white;
     padding: 1em;
     display: flex;
@@ -24,11 +25,13 @@
     align-items: center;
     z-index: 1000;
 }
+
 .navbar-brand h5 {
     margin: 0;
     font-size: 1.5em;
     font-weight: bold;
 }
+
 .menu-icon {
     display: flex;
     flex-direction: column;
@@ -89,248 +92,280 @@
 .nav-content.open {
     display: flex;
 }
-  .img1 {
-      width:100%;
-      margin:30px 0px;
-      border:5px solid white;
-      border-radius :200px 200px;
-      transition-duration:3s;
-  }
-  .img1:hover{
-      transform: rotateZ(45deg);
-  }
-  .container {
-      position:relative ;
-  }  
-  .center {
-      position :absolute ;
-      top:20%;
-      left:10%;
-  }
-  input[type="radio"] {
-      display:none;
-  }
-  #container{
-      border :1px solid black;
-      
-  }
+
+/* General Styles */
+.containers {
+    text-align: center;
+}
+
+.img1 {
+    width: 80%; /* Adjusted for better PC viewing */
+    margin: 30px auto; /* Center on PC */
+    border: 5px solid white;
+    border-radius: 200px;
+    transition-duration: 3s;
+    display: block; /* Added display:block */
+}
+
+.img1:hover {
+    transform: rotateZ(45deg);
+}
+
+h2, h4, p {
+    text-align: center;
+    padding: 0 20px; /* Add some padding for readability */
+}
+
+/* Accordion Styles */
 .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 .accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
-  content: "\2212";
+    content: "\2212";
 }
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-  * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family:Helvetica, Verdana, Sans-serif;
-    }
-    .image-container {
-      margin: 0 auto; /* center the image containers */
-      width: 80%;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22); /* material box shadow */
-      margin-bottom: 20px;
-      transition-duration: 1s;
-    }
-    .image-container:hover {
-      width: 90%;
-      box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
-    }
-    /* make the images responsive */
-    img {
-      width: 100%;
-      height: auto;
-    }
-    .image-description {
-      padding: 0 15px 15px 15px;
-      text-align: center;
-    }
-    
-    /* lightbox stylesheet */
-    .lightbox {
-      display: table; /* helps us center the lightbox-content */
-      transition-duration: 1s; /* duration of the fade in effect */
-    
-      /* make the lightbox occupy the entire page */
-      position: fixed;
-      top: -100%; /* hide the lightbox above the top edge */
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
-    }
-    .lightbox:target {
-      top: 0; /* make the lightbox cover the entire page */
-    }
-    .lightbox-content {
-      display: table-cell;
-      vertical-align: middle; /* vertically center */
-      text-align: center; /* horizontally center */
-    }
-    .close {
-      /* position the CLOSE button to the top-right corner */
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    
-      /* style the close button */
-      font-size: 20px;
-      font-weight: 300;
-      text-decoration: none;
-      color: white;
-    }
-    
-    /* make the image responsive */
-    .lightbox img {
-      max-width: 100%;
-      height: auto;
-    }
-    .section1{
-        background-color :#505f9f;
-        color:white;
-        text-align :center;
-    }
-    .section2{
-        background-image:url(Newedit.jpg);
-        background-size :100% 100%;
-        background-repeat:no-repeat;
-        margin-top :0px;        
-    }
-   footer{
-       padding:0px;
-   } 
-   .hr{
-       width :40%;
-   }
- 
-   ul{
-       list-style-type:none;
-   }
-   p{
-       margin :20px 20px;
-   }
-   form{
-       margin:50px;
-          }
-   input[type=text] {
-       width: 100%;
-       padding: 12px 20px;
-       margin: 8px 0;
-       display: inline-block;
-       border: 1px solid #ccc;
-       border-radius: 4px;
-       box-sizing: border-box;
-   }
-   input[type=submit] {
-       width:30%;
-       background-color :#11ff00;
-       color:black;
-       padding:10px 20px;
-       margin:20px 0px;
-       border:none ;
-       border-radius:0px;
-       cursor:pointer;
-                    
-   }
-   label.form{
-       
-       color :white;
-              }
-              
-   textarea{
-       margin-top:10px;
-       padding:20px;
-       border-radius :5px;
-   }
-   .btn1{
-       background-color :#f99a2ad5;
-       border-radius :10px;
-       border:none;
-       padding :20px 50px;
-       display :inline-block;
-       margin:20px 10px; 
-   }
-   .btn1:hover{
-       background-color :white;
-       border:2px solid black;
-       color:black;
-   }
-   .btn2{
-       border-radius :10px;
-       background-color :white;
-       border:1px solid black;
-       padding:20px 50px;
-       display:inline-block;
-       margin:20px 10px;
-   }
-   .btn2:hover{
-       background-color :#2724279e;
-       color :white;
-       border:none;
-   }
-   .firstsection{
-       background-color :#ffd295e4;
-       margin:40px 20px;
-   }
 
-   .firstsection i{
-       display :block;
-       padding :30px ;
-       font-size:30px;
-       font-style:normal;
-   }
-   #mediaicons i{
-       font-size :20px;
-       padding:10px;
-       
-   }
-   #mediaicons{
-       margin:50px 0px;
-   }
-   
-   #footer_icons{
-       font-style:normal ;
-       text-align :center;
-   }
-   .bgrnd{
-       background:#505f9f ;
-   }
-   .quote_request{
-       color:#fffc40;
-       margin-top :30px;
-   }
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* Image Gallery Styles */
+.image-container {
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30), 0 11px 8px rgba(0, 0, 0, 0.22);
+    transition-duration: 1s;
+}
+
+.image-container:hover {
+    width: 90%;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.image-description {
+    padding: 0 15px 15px 15px;
+    text-align: center;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: table;
+    transition-duration: 1s;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox:target {
+    top: 0;
+}
+
+.lightbox-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+.lightbox img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section Styles */
+.section1 {
+    background-color: #505f9f;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Added padding */
+}
+
+.section2 {
+    background-image: url(Newedit.jpg);
+    background-size: cover; /* Changed to cover */
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+footer {
+    padding: 20px 0; /* Added padding */
+    text-align: center; /* Center the footer logo */
+}
+
+hr {
+    width: 80%;
+    margin: 20px auto; /* Center the hr */
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    margin: 20px;
+}
+
+form {
+    margin: 20px; /* Reduced margin */
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 40%; /* Adjusted width */
+    background-color: #11ff00;
+    color: black;
+    padding: 10px 20px;
+    margin: 20px auto; /* Center the button */
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: block; /* Added display:block */
+}
+
+label.form {
+    color: white;
+}
+
+textarea {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.btn1, .btn2 {
+    border-radius: 10px;
+    padding: 20px 50px;
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+.btn1 {
+    background-color: #f99a2ad5;
+    border: none;
+}
+
+.btn1:hover {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.btn2 {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.btn2:hover {
+    background-color: #2724279e;
+    color: white;
+    border: none;
+}
+
+.firstsection {
+    background-color: #ffd295e4;
+    margin: 40px 20px;
+}
+
+.firstsection i {
+    display: block;
+    padding: 30px;
+    font-size: 30px;
+    font-style: normal;
+}
+
+#mediaicons i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#mediaicons {
+    margin: 50px 0;
+    text-align: center; /* Center icons */
+}
+
+#footer_icons {
+    font-style: normal;
+    text-align: center;
+}
+
+.bgrnd {
+    background: #505f9f;
+}
+
+.quote_request {
+    color: #fffc40;
+    margin-top: 30px;
+    text-align: center; /* Center the quote request */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Adjust styles for mobile */
+    .img1 {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 90%;
+    }
+
+    .btn1, .btn2 {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -379,56 +414,45 @@
   <p>Our team of experts has years of experience in building construction, architectural design, and structural design. Trust us to bring your vision to life.
 </p>
 </div>
-
 <button class="accordion">Unique Combination of Services</button>
 <div class="panel">
   <p>Get everything you need under one roof. Our comprehensive services ensure a seamless experience from design to construction.</p>
 </div>
-
 <button class="accordion">Personalized Services</button>
 <div class="panel">
   <p>Our personalized service ensures that you receive customized solutions that meet your specific requirements.</p>
 </div>
-
 <button class="accordion">Innovative Solutions</button>
 <div class="panel">
   <p>Our team is dedicated to finding creative solutions to complex construction problems. We stay up-to-date with the latest technologies and techniques to ensure that your project is completed efficiently and effectively."
 </p>
 </div>
-
 <button class="accordion">Cost-Effective Solutions</button>
 <div class="panel">
   <p>We understand that budget is a top priority for our clients. Our team works closely with you to identify cost-saving opportunities without sacrificing quality or safety."</p>
 </div>
-
 <button class="accordion">Timely Completion</button>
 <div class="panel">
   <p>We understand the importance of meeting deadlines. Our team works efficiently to ensure that your project is completed on time, every time.</p>
 </div>
 <h2>Project Portfolio</h2>
-
     <div class="image-container" id="container1">
       <a href="#image1"><img src="Construction3.jpg" /></a>
       <p class="image-description"> Lorem ipsum dolor sit amet. </p>
     </div>
-  
     <div class="image-container" id="container2">
       <a href="#image2"><img src="Construction2.jpg" /></a>
       <p class="image-description"> Lorem ipsum dolor sit amet. </p>
     </div>
-  
     <div class="image-container" id="container3">
       <a href="#image3"><img src="Construction8.jpg" /></a>
       <p class="image-description"> Lorem ipsum dolor sit amet. </p>
     </div>
-  
     <div class="image-container" id="container4">
       <a href="#image4"><img src="Construction10.jpg" /></a>
       <p class="image-description"> Lorem ipsum dolor sit amet. </p>
-    </div>
-  
+    </div>  
   </div>
-  
   <div class="lightbox" id="image1">
     <a href="#" class="close">CLOSE</a>
     <div class="lightbox-content">
@@ -442,14 +466,12 @@
       <img src="Construction2.jpg" />
     </div>
   </div>
-  
   <div class="lightbox" id="image3">
     <a href="#container3" class="close">CLOSE</a>
     <div class="lightbox-content">
       <img src="Construction8.jpg" />
     </div>
   </div>
-  
   <div class="lightbox" id="image4">
     <a href="#container4" class="close">CLOSE</a>
     <div class="lightbox-content">
@@ -472,8 +494,7 @@
         <p>General Operations Manager</p>
         <p>0780968884</p>
         <p>tomusangemze45@gmail.com</p>
-    
-    
+
        <h3><u>Mr. Joel Nkwanga</u></h3>
        
         <p>Chief Financial Officer</p>
@@ -521,7 +542,6 @@
 <footer>
     <img src="Logo3.jpg"/>
 </footer>
-
 
     <script>
   var acc = document.getElementsByClassName("accordion");
