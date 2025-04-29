@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Improve readability */
 }
 
 /* Navbar Styles */
@@ -12,7 +13,7 @@ body {
     width: 100%;
     background-color: #08145d;
     color: white;
-    padding: 1em;
+    padding: 1em 2em; /* Add some side padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +22,7 @@ body {
 
 .navbar-brand h5 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.75em; /* Slightly larger on desktop */
     font-weight: bold;
 }
 
@@ -32,10 +33,10 @@ body {
 }
 
 .menu-span {
-    width: 25px;
-    height: 3px;
+    width: 28px; /* Slightly wider */
+    height: 3.5px; /* Slightly thicker */
     background-color: white;
-    margin: 4px 0;
+    margin: 5px 0; /* More spacing */
     transition: all 0.3s ease-in-out;
 }
 
@@ -61,17 +62,17 @@ body {
 }
 
 .nav-content ul li {
-    margin: 20px 0;
+    margin: 30px 0; /* More spacing */
 }
 
 .nav-content ul li a {
     color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.5em; /* Slightly larger */
 }
 
 .menu-icon.open .menu-span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
 .menu-icon.open .menu-span:nth-child(2) {
@@ -79,7 +80,7 @@ body {
 }
 
 .menu-icon.open .menu-span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .nav-content.open {
@@ -89,11 +90,13 @@ body {
 /* General Styles */
 .containers {
     text-align: center;
+    padding: 20px; /* Add some padding around the content */
 }
 
 .img1 {
+    max-width: 500px; /* Limit maximum width */
     width: 80%;
-    margin: 30px auto;
+    margin: 40px auto; /* More top/bottom margin */
     border: 5px solid white;
     border-radius: 200px;
     transition-duration: 3s;
@@ -101,12 +104,28 @@ body {
 }
 
 .img1:hover {
-    transform: rotateZ(45deg);
+    transform: rotateZ(45deg) scale(1.05); /* Add a slight scale on hover */
 }
 
 h2, h4, p {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 30px; /* More side padding */
+}
+
+h2 {
+    font-size: 2em; /* Larger heading */
+    margin-top: 30px;
+}
+
+h4 {
+    font-size: 1.5em; /* Slightly larger subheading */
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.1em; /* Improved readability */
+    margin: 20px auto; /* Center and add margin */
+    max-width: 800px; /* Limit paragraph width for better reading experience */
 }
 
 /* Accordion Styles */
@@ -114,12 +133,13 @@ h2, h4, p {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
-    width: 100%;
+    padding: 20px; /* More padding */
+    width: 80%; /* Limit width on larger screens */
+    margin: 10px auto; /* Center the accordions */
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
     transition: 0.4s;
 }
 
@@ -132,7 +152,8 @@ h2, h4, p {
     color: #777;
     font-weight: bold;
     float: right;
-    margin-left: 5px;
+    margin-left: 10px; /* More spacing for the icon */
+    font-size: 1.2em;
 }
 
 .active:after {
@@ -140,46 +161,49 @@ h2, h4, p {
 }
 
 .panel {
-    padding: 0 18px;
+    padding: 0 25px; /* More side padding */
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    width: 80%; /* Match accordion width */
+    margin: 0 auto; /* Center the panel */
+}
+
+.panel p {
+    padding: 15px 0; /* Add some vertical padding to the panel text */
 }
 
 /* Image Gallery Styles */
 .image-container {
-    width: 80%;
-    margin: 20px auto;
+    width: 60%; /* Wider on larger screens */
+    margin: 30px auto; /* More vertical margin */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30), 0 11px 8px rgba(0, 0, 0, 0.22);
-    transition-duration: 1s;
+    transition-duration: 0.5s; /* Faster transition */
+    display: block; /* Ensure it's a block-level element */
 }
 
 .image-container:hover {
-    width: 90%;
+    width: 65%; /* Slightly larger on hover */
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 .image-description {
-    padding: 0 15px 15px 15px;
+    padding: 15px;
     text-align: center;
+    font-size: 1em;
 }
 
 /* Lightbox Styles */
 .lightbox {
     display: table;
-    transition-duration: 1s;
+    transition-duration: 0.3s; /* Faster transition */
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8); /* Slightly less opaque */
 }
 
 .lightbox:target {
@@ -194,16 +218,22 @@ img {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 20px; /* More spacing from the top */
+    right: 20px; /* More spacing from the right */
+    font-size: 24px; /* Larger close button */
     font-weight: 300;
     text-decoration: none;
     color: white;
+    opacity: 0.8; /* Slightly less opaque */
+}
+
+.close:hover {
+    opacity: 1;
 }
 
 .lightbox img {
-    max-width: 100%;
+    max-width: 80%; /* Larger image in lightbox */
+    max-height: 80%;
     height: auto;
 }
 
@@ -212,24 +242,71 @@ img {
     background-color: #505f9f;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px; /* More padding */
+}
+
+.section1 h1 {
+    font-size: 2.5em; /* Larger heading */
+    margin-bottom: 20px;
+}
+
+.section1 p, .section1 h3 {
+    font-size: 1.1em;
+    margin: 15px 0;
 }
 
 .section2 {
     background-image: url(Newedit.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 0;
+    padding: 50px 0; /* Add vertical padding */
+}
+
+.section2 .quote_request {
+    font-size: 2.2em; /* Larger quote request heading */
+    margin-bottom: 30px;
+}
+
+.section2 .form {
+    width: 50%; /* Wider form on larger screens */
+    margin: 30px auto;
+    padding: 30px; /* Add padding to the form container */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 10px;
+}
+
+.section2 .form label.form {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section2 .form input[type="text"],
+.section2 .form input[type="email"],
+.section2 .form textarea {
+    padding: 15px; /* More padding for input fields */
+    font-size: 1em;
+}
+
+.section2 .form input[type="submit"] {
+    width: 30%; /* Adjust submit button width */
+    padding: 12px 25px;
+    font-size: 1.1em;
+    margin-top: 30px;
 }
 
 footer {
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
+footer img {
+    max-width: 150px; /* Limit footer logo size */
+}
+
 hr {
-    width: 80%;
-    margin: 20px auto;
+    width: 60%; /* Narrower hr on larger screens */
+    margin: 30px auto;
 }
 
 ul {
@@ -237,50 +314,55 @@ ul {
 }
 
 p {
-    margin: 20px;
+    margin: 25px auto;
 }
 
 form {
-    margin: 20px;
+    margin: 30px;
 }
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 15px;
+    margin: 10px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 1em;
 }
 
 input[type="submit"] {
-    width: 40%;
+    width: 30%;
     background-color: #11ff00;
     color: black;
-    padding: 10px 20px;
-    margin: 20px auto;
+    padding: 12px 25px;
+    margin: 30px auto;
     border: none;
-    border-radius: 0;
+    border-radius: 5px;
     cursor: pointer;
     display: block;
+    font-size: 1.1em;
 }
 
 label.form {
     color: white;
+    font-size: 1.1em;
 }
 
 textarea {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 20px;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 .btn1, .btn2 {
     border-radius: 10px;
-    padding: 20px 50px;
+    padding: 25px 60px; /* Larger buttons */
     display: inline-block;
-    margin: 20px 10px;
+    margin: 30px 20px; /* More spacing */
+    font-size: 1.1em;
 }
 
 .btn1 {
@@ -307,60 +389,141 @@ textarea {
 
 .firstsection {
     background-color: #ffd295e4;
-    margin: 40px 20px;
+    margin: 50px auto; /* Center and add more margin */
+    padding: 40px; /* More padding */
+    max-width: 900px; /* Limit width of the section */
+    border-radius: 8px;
+}
+
+.firstsection h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
 .firstsection i {
-    display: block;
-    padding: 30px;
-    font-size: 30px;
+    display: inline-block; /* Display services in a row on larger screens */
+    padding: 15px 30px; /* Adjust padding for inline display */
+    font-size: 1.2em;
     font-style: normal;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 #mediaicons i {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 24px; /* Larger icons */
+    padding: 15px;
 }
 
 #mediaicons {
-    margin: 50px 0;
+    margin: 60px 0;
     text-align: center;
 }
 
 #footer_icons {
     font-style: normal;
     text-align: center;
+    font-size: 1.2em;
 }
 
 .bgrnd {
     background: #505f9f;
+    padding: 40px 0; /* Add some padding to the background section */
 }
 
 .quote_request {
     color: #fffc40;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
+    font-size: 2.5em;
 }
 
 .form {
-    width: 70%;
-    margin: 20px auto;
+    width: 60%;
+    margin: 30px auto;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+/* Media Queries for Tablet (min-width: 769px and max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
     .img1 {
-        width: 100%;
+        max-width: 60%;
     }
 
-    input[type="submit"] {
+    .accordion {
         width: 90%;
     }
 
-    .btn1, .btn2 {
+    .panel {
         width: 90%;
-        margin: 10px auto;
-        display: block;
-        text-align: center;
+    }
+
+    .image-container {
+        width: 70%;
+    }
+
+    .section2 .form {
+        width: 70%;
+    }
+
+    .firstsection i {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Media Query for Desktop and Larger Screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .menu-icon {
+        display: none; /* Hide the mobile menu icon on desktop */
+    }
+
+    .nav-content {
+        display: flex !important; /* Always show navigation on desktop */
+        position: static; /* Adjust positioning */
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav-content ul {
+        display: flex;
+        text-align: left;
+    }
+
+    .nav-content ul li {
+        margin: 0 20px;
+    }
+
+    .nav-content ul li a {
+        color: white;
+        font-size: 1.2em;
+    }
+
+    .img1 {
+        max-width: 700px;
+    }
+
+    .image-container {
+        width: 45%; /* Display images side by side or in a grid */
+        display: inline-block;
+        margin: 20px;
+    }
+
+    /* Adjust lightbox for larger screens */
+    .lightbox img {
+        max-width: 60%;
+        max-height: 70%;
+    }
+
+    .section2 .form {
+        width: 40%;
+    }
+
+    .firstsection i {
+        font-size: 1.3em;
+        padding: 15px 35px;
     }
 }
